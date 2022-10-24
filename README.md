@@ -27,7 +27,7 @@ width="55%"/>
 </p>
 
 After forking the respository you can use `git clone 
-your-username@domain.com:your-git-username/challenge-20-joint-savings-smart-contract.git` 
+your-username@domain.com:your-git-username/challenge-21-new-martian-cryptocurrency.git` 
 to download a copy of the forked respository to your computer.
 
 Forking has the added benefit of enabling your to easily keep your copy of the 
@@ -41,46 +41,78 @@ application up-to-date should any changes or improvements be made in the future.
 
 For example you could perform the following:
 
-1. Load the code in `joint_savings.sol` in <a href="https://remix.ethereum.org">remix.ethereum.org</a>.
+1. Load the code in `KaseiCoin.sol` and `KaseiCoinCrowdsale.sol` in <a href="https://remix.ethereum.org">remix.ethereum.org</a>.
 2. Compile the code using a `0.5.x` version compiler.
-3. Deploy the smart contract on `Remix VM (London)`.
+3. Deploy the smart contract on `Remix VM (London)` or to local MetaMask accounts on a development blockchain in Ganache.
 
-### Examples of the application running:
+## Execution Results 
 
-Using `setAccounts` to set the two accounts that own the contract:
+Below is an example of the deployment and minting of KaseiCoins
+
+Proof the KaseiCoin contract compiled successfully:
 <p align="center">
-<img src="https://github.com/warp-9000/challenge-20-joint-savings-smart-contract/blob/main/Execution_Results/Screen%20Shot%202022-10-16%20at%204.51.39%20PM%20-%20used%20setAccounts%20function.png?raw=true" 
-alt="used setAccounts function" width="85%" />
+<img src="https://github.com/warp-9000/challenge-21-new-martian-cryptocurrency/blob/main/Execution_Results/20221022-181207-KaseiCoin.sol-Compilation.png?raw=true" 
+width="85%" />
 </p>
 
-Deposit 1 ether as wei to the contract:
+Proof the KaseiCoinCrowdsale and KaseiCoinCrowdsaleDeployable contracts compiled successfully:
 <p align="center">
-<img src="https://github.com/warp-9000/challenge-20-joint-savings-smart-contract/blob/main/Execution_Results/Screen%20Shot%202022-10-16%20at%204.57.35%20PM%20-%20send%201%20ether%20as%20wei.png?raw=true" 
-alt="depositing 1 ether as wei" width="85%" />
+<img src="https://github.com/warp-9000/challenge-21-new-martian-cryptocurrency/blob/main/Execution_Results/20221023-203658-KaseiCoinCrowdsale.sol-Compilation.png?raw=true" 
+width="85%" />
 </p>
 
-Deposit 10 ether as wei to the contract:
+Deploying the KaseiCoinCrowdsaleDeployable contract:
 <p align="center">
-<img src="https://github.com/warp-9000/challenge-20-joint-savings-smart-contract/blob/main/Execution_Results/Screen%20Shot%202022-10-16%20at%204.59.13%20PM%20-%20send%2010%20ether%20as%20wei.png?raw=true" 
-alt="depositing 1 ether as wei" width="85%" />
+<img src="https://github.com/warp-9000/challenge-21-new-martian-cryptocurrency/blob/main/Execution_Results/20221023-222315-DeployingContract-01.gif?raw=true" 
+width="85%" />
 </p>
 
-Deposit 5 ether to the contract:
+Adding the deployed KaseiCoinCrowdsale and KaseiCoin contracts to Remix:
 <p align="center">
-<img src="https://github.com/warp-9000/challenge-20-joint-savings-smart-contract/blob/main/Execution_Results/Screen%20Shot%202022-10-16%20at%205.00.06%20PM%20-%20send%205%20ether.png?raw=true" 
-alt="deposit 5 ether" width="85%" />
+<img src="https://github.com/warp-9000/challenge-21-new-martian-cryptocurrency/blob/main/Execution_Results/20221023-222514-DeployingContract-02.gif?raw=true" 
+width="85%" />
 </p>
 
-Withdraw 5 ether to `accountOne`:
+Test account ETH balances before minting KAI:
 <p align="center">
-<img src="https://github.com/warp-9000/challenge-20-joint-savings-smart-contract/blob/main/Execution_Results/Screen%20Shot%202022-10-16%20at%205.02.40%20PM%20-%20withdraw%205%20ether%20to%20accountOne.png?raw=true" 
-alt="withdraw 5 ether to accountOne" width="85%" />
+<img src="https://github.com/warp-9000/challenge-21-new-martian-cryptocurrency/blob/main/Execution_Results/20221023-222729-BeforePurchasingKAI.png?raw=true" 
+width="85%" />
 </p>
 
-Withdraw 10 ether to `accountTwo`:
+Purchasing 3 KAI:
 <p align="center">
-<img src="https://github.com/warp-9000/challenge-20-joint-savings-smart-contract/blob/main/Execution_Results/Screen%20Shot%202022-10-16%20at%205.04.31%20PM%20-%20withdraw%2010%20ether%20to%20accountTwo.png?raw=true" 
-alt="withdraw 10 ether to accountTwo" width="85%" />
+<img src="https://github.com/warp-9000/challenge-21-new-martian-cryptocurrency/blob/main/Execution_Results/20221023-222907-PurchasingKAI-01.gif?raw=true" 
+width="85%" />
+</p>
+
+Purchasing 5 KAI:
+<p align="center">
+<img src="https://github.com/warp-9000/challenge-21-new-martian-cryptocurrency/blob/main/Execution_Results/20221023-223112-PurchasingKAI-02.gif?raw=true" 
+width="85%" />
+</p>
+
+Purchasing 11 KAI:
+<p align="center">
+<img src="https://github.com/warp-9000/challenge-21-new-martian-cryptocurrency/blob/main/Execution_Results/20221023-223544-PurchasingKAI-03.gif?raw=true" 
+width="85%" />
+</p>
+
+Test account ETH balances after minting KAI:
+<p align="center">
+<img src="https://github.com/warp-9000/challenge-21-new-martian-cryptocurrency/blob/main/Execution_Results/20221023-223800-AfterPurchasingKAI.png?raw=true" 
+width="85%" />
+</p>
+
+The blockchain transactions from deploying the contract and minting coins:
+<p align="center">
+<img src="https://github.com/warp-9000/challenge-21-new-martian-cryptocurrency/blob/main/Execution_Results/20221023-223943-BlockchainTransactions.png?raw=true" 
+width="85%" />
+</p>
+
+The total coin supply and wei raised after minting:
+<p align="center">
+<img src="https://github.com/warp-9000/challenge-21-new-martian-cryptocurrency/blob/main/Execution_Results/20221023-224118-TotalSupply&WeiRaised.gif?raw=true" 
+width="85%" />
 </p>
 
 ---
@@ -89,6 +121,6 @@ alt="withdraw 10 ether to accountTwo" width="85%" />
 
 Thanks!
 
-<a href="https://github.com/warp-9000/challenge-20-joint-savings-smart-contract/graphs/contributors">
-<img src="https://contrib.rocks/image?repo=warp-9000/challenge-20-joint-savings-smart-contract" />
+<a href="https://github.com/warp-9000/challenge-21-new-martian-cryptocurrency/graphs/contributors">
+<img src="https://contrib.rocks/image?repo=warp-9000/challenge-21-new-martian-cryptocurrency" />
 </a>
